@@ -25,12 +25,6 @@ export default function TextToImagePanel() {
     //   feature: Feature.SEED,
     //   content: <SeedSettings />,
     // },
-    variations: {
-      header: `${t('parameters.variations')}`,
-      feature: Feature.VARIATIONS,
-      content: <VariationsSettings />,
-      additionalHeaderComponents: <GenerateVariationsToggle />,
-    },
     // face_restore: {
     //   header: `${t('parameters.faceRestoration')}`,
     //   feature: Feature.FACE_CORRECTION,
@@ -42,6 +36,12 @@ export default function TextToImagePanel() {
       feature: Feature.UPSCALE,
       content: <UpscaleSettings />,
       additionalHeaderComponents: <UpscaleToggle />,
+    },
+    variations: {
+      header: `${t('parameters.variations')}`,
+      feature: Feature.VARIATIONS,
+      content: <VariationsSettings />,
+      additionalHeaderComponents: <GenerateVariationsToggle />,
     },
     symmetry: {
       header: `${t('parameters.symmetry')}`,

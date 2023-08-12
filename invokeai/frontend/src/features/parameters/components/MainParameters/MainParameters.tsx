@@ -13,6 +13,7 @@ import SeedSettings from './Seed/SeedSettings';
 import MainAspectBar from './AspectBar/MainAspectBar';
 import ImageToImageStrength from '../AdvancedParameters/ImageToImage/ImageToImageStrength';
 import { activeTabNameSelector } from 'features/ui/store/uiSelectors';
+import ImageFit from '../AdvancedParameters/ImageToImage/ImageFit';
 
 export const inputWidth = 'auto';
 
@@ -63,6 +64,7 @@ export default function MainSettings() {
                 label={t('parameters.img2imgStrength')}
                 styleClass="main-settings-block image-to-image-strength-main-option"
               />
+              {activeTabName === 'img2img' && <ImageFit />}
             </>
           )}
         </Flex>

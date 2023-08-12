@@ -26,12 +26,6 @@ export default function ImageToImagePanel() {
     //   feature: Feature.SEED,
     //   content: <SeedSettings />,
     // },
-    variations: {
-      header: `${t('parameters.variations')}`,
-      feature: Feature.VARIATIONS,
-      content: <VariationsSettings />,
-      additionalHeaderComponents: <GenerateVariationsToggle />,
-    },
     // face_restore: {
     //   header: `${t('parameters.faceRestoration')}`,
     //   feature: Feature.FACE_CORRECTION,
@@ -44,16 +38,22 @@ export default function ImageToImagePanel() {
       content: <UpscaleSettings />,
       additionalHeaderComponents: <UpscaleToggle />,
     },
-    symmetry: {
-      header: `${t('parameters.symmetry')}`,
-      content: <SymmetrySettings />,
-      additionalHeaderComponents: <SymmetryToggle />,
+    variations: {
+      header: `${t('parameters.variations')}`,
+      feature: Feature.VARIATIONS,
+      content: <VariationsSettings />,
+      additionalHeaderComponents: <GenerateVariationsToggle />,
     },
-    other: {
-      header: `${t('parameters.otherOptions')}`,
-      feature: Feature.OTHER,
-      content: <ImageToImageOutputSettings />,
-    },
+    // symmetry: {
+    //   header: `${t('parameters.symmetry')}`,
+    //   content: <SymmetrySettings />,
+    //   additionalHeaderComponents: <SymmetryToggle />,
+    // },
+    // other: {
+    //   header: `${t('parameters.otherOptions')}`,
+    //   feature: Feature.OTHER,
+    //   content: <ImageToImageOutputSettings />,
+    // },
   };
 
   return (
@@ -65,7 +65,7 @@ export default function ImageToImagePanel() {
       </Flex>
       <ProcessButtons />
       <MainSettings />
-      <ImageToImageOptions />
+      {/* <ImageToImageOptions /> */}
       <ParametersAccordion accordionInfo={imageToImageAccordions} />
     </InvokeOptionsPanel>
   );
