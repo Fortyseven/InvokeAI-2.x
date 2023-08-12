@@ -5,7 +5,7 @@ import SeamlessSettings from './SeamlessSettings';
 const OutputSettings = () => {
   return (
     <Flex gap={2} direction="column">
-      <SeamlessSettings />
+      {/* <SeamlessSettings /> */}
       <HiresSettings />
     </Flex>
   );
