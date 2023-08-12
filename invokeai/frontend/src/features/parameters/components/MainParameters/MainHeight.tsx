@@ -45,7 +45,7 @@ export default function MainHeight() {
       onChange={(e) => dispatch(setHeight(Number(e.target.value)))}
       validValues={HEIGHTS}
       styleClass="main-settings-block"
-      width="5.3rem"
+      minWidth="5.3rem"
       size={'xs'}
     />
   );

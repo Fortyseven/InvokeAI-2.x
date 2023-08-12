@@ -27,7 +27,7 @@ export default function MainSettings() {
       feature: undefined,
       content: shouldUseSliders ? (
         <Flex flexDir="column" rowGap={2}>
-          <MainIterations />
+          {/* <MainIterations /> */}
           <MainSteps />
           <MainCFGScale />
           <MainWidth />
@@ -37,15 +37,15 @@ export default function MainSettings() {
       ) : (
         <Flex flexDirection="column" rowGap={1}>
           <Flex>
-            <MainIterations />
+            {/* <MainIterations /> */}
             <MainSteps />
             <MainCFGScale />
+            <MainSampler />
           </Flex>
           <Flex marginTop={'0.5rem'}>
             <MainWidth />
             <MainSwapDims />
             <MainHeight />
-            <MainSampler />
           </Flex>
           <Flex marginTop={'0.5rem'}>
             <SeedSettings />
