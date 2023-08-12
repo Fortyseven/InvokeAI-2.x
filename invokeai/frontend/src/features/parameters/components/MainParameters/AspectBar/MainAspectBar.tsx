@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Flex } from '@chakra-ui/react';
 import { RootState } from 'app/store';
 import { useAppDispatch, useAppSelector } from 'app/storeHooks';
@@ -5,16 +6,24 @@ import IAIButton from 'common/components/IAIIconButton';
 import { setHeight, setWidth } from 'features/parameters/store/generationSlice';
 import { FaExchangeAlt } from 'react-icons/fa';
 import { HEIGHTS } from 'app/constants';
-export default function MainSwapDims() {
+import { activeTabNameSelector } from 'features/ui/store/uiSelectors';
+
+const ASPECTS = [
+  { ratio_w: 1, ratio_h: 1 },
+  { ratio_w: 3, ratio_h: 2 },
+  { ratio_w: 4, ratio_h: 3 },
+  { ratio_w: 16, ratio_h: 9 },
+  { ratio_w: 21, ratio_h: 9 },
+];
+
+export default function MainAspectBar() {
   const width = useAppSelector((state: RootState) => state.generation.width);
-  const height = useAppSelector((state: RootState) => state.generation.height);
+  // const height = useAppSelector((state: RootState) => state.generation.height);
+  const activeTabName = useAppSelector(activeTabNameSelector);
 
   const dispatch = useAppDispatch();
 
   const onClick = function (ratio_w: number, ratio_h: number) {
-    // dispatch(setWidth(height));
-    // dispatch(setHeight(width));
-
     if (ratio_w == 1 && ratio_h == 1) {
       dispatch(setHeight(width));
       return;
@@ -36,43 +45,18 @@ export default function MainSwapDims() {
   };
 
   return (
-    <Flex>
-      <IAIButton
-        onClick={() => onClick(1, 1)}
-        tooltip={'1:1'}
-        aria-label={'1:1'}
-        size={'sm'}
-        flex={1}
-      >
-        <>1:1</>
-      </IAIButton>
-      <IAIButton
-        onClick={() => onClick(3, 2)}
-        tooltip={'3:2'}
-        aria-label={'3:2'}
-        size={'sm'}
-        flex={1}
-      >
-        <>3:2</>
-      </IAIButton>
-      <IAIButton
-        onClick={() => onClick(4, 3)}
-        tooltip={'4:3'}
-        aria-label={'4:3'}
-        size={'sm'}
-        flex={1}
-      >
-        <>4:3</>
-      </IAIButton>
-      <IAIButton
-        onClick={() => onClick(16, 9)}
-        tooltip={'16:9'}
-        aria-label={'16:9'}
-        size={'sm'}
-        flex={1}
-      >
-        <>16:9</>
-      </IAIButton>
+    <Flex gap={1}>
+      {ASPECTS.map((aspect) => (
+        <IAIButton
+          onClick={() => onClick(aspect.ratio_w, aspect.ratio_h)}
+          aria-label={`${aspect.ratio_w}:${aspect.ratio_h}`}
+          size={'xs'}
+          flex={1}
+          isDisabled={activeTabName === 'unifiedCanvas'}
+        >
+          <>{`${aspect.ratio_w}:${aspect.ratio_h}`}</>
+        </IAIButton>
+      ))}
     </Flex>
   );
 }
