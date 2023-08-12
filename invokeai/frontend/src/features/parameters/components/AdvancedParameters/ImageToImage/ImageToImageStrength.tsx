@@ -21,7 +21,7 @@ export default function ImageToImageStrength(props: ImageToImageStrengthProps) {
   const handleChangeStrength = (v: number) => dispatch(setImg2imgStrength(v));
 
   const handleImg2ImgStrengthReset = () => {
-    dispatch(setImg2imgStrength(0.75));
+    dispatch(setImg2imgStrength(0.5));
   };
 
   return (
