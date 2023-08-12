@@ -25,14 +25,14 @@ const initialPostprocessingState: PostprocessingState = {
   codeformerFidelity: 0.75,
   facetoolStrength: 0.75,
   facetoolType: 'gfpgan',
-  hiresFix: false,
-  hiresStrength: 0.75,
+  hiresFix: true,
+  hiresStrength: 0.5,
   shouldLoopback: false,
   shouldRunESRGAN: false,
   shouldRunFacetool: false,
-  upscalingLevel: 4,
-  upscalingDenoising: 0.75,
-  upscalingStrength: 0.75,
+  upscalingLevel: 2,
+  upscalingDenoising: 0.1,
+  upscalingStrength: 0.6,
 };
 
 const initialState: PostprocessingState = initialPostprocessingState;

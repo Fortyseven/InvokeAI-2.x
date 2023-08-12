@@ -28,7 +28,7 @@ export default function MainHeight() {
       step={64}
       max={2048}
       onChange={(v) => dispatch(setHeight(v))}
-      handleReset={() => dispatch(setHeight(512))}
+      handleReset={() => dispatch(setHeight(768))}
       withInput
       withReset
       withSliderMarks

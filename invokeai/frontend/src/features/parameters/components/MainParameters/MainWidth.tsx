@@ -28,7 +28,7 @@ export default function MainWidth() {
       step={64}
       max={2048}
       onChange={(v) => dispatch(setWidth(v))}
-      handleReset={() => dispatch(setWidth(512))}
+      handleReset={() => dispatch(setWidth(768))}
       withInput
       withReset
       withSliderMarks

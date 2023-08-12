@@ -36,7 +36,7 @@ const HiresStrength = () => {
   };
 
   const handleHiResStrengthReset = () => {
-    dispatch(setHiresStrength(0.75));
+    dispatch(setHiresStrength(0.5));
   };
 
   return (
