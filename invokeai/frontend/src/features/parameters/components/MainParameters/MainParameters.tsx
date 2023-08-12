@@ -47,7 +47,7 @@ export default function MainSettings() {
             <MainHeight />
             <MainSampler />
           </Flex>
-          <Flex>
+          <Flex marginTop={'1rem'}>
             <SeedSettings />
           </Flex>
         </Flex>
