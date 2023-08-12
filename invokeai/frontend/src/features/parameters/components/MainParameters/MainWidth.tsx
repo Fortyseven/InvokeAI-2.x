@@ -45,7 +45,8 @@ export default function MainWidth() {
       onChange={(e) => dispatch(setWidth(Number(e.target.value)))}
       validValues={WIDTHS}
       styleClass="main-settings-block"
-      width="5.5rem"
+      width="5.3rem"
+      size={'xs'}
     />
   );
 }

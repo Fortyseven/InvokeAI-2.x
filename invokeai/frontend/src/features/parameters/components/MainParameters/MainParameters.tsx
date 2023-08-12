@@ -9,6 +9,7 @@ import MainIterations from './MainIterations';
 import MainSampler from './MainSampler';
 import MainSteps from './MainSteps';
 import MainWidth from './MainWidth';
+import MainSwapDims from './MainSwapDims';
 
 export const inputWidth = 'auto';
 
@@ -33,14 +34,15 @@ export default function MainSettings() {
           <MainSampler />
         </Flex>
       ) : (
-        <Flex flexDirection="column" rowGap={2}>
-          <Flex gap={2}>
+        <Flex flexDirection="column" rowGap={1}>
+          <Flex gap={0}>
             <MainIterations />
             <MainSteps />
             <MainCFGScale />
           </Flex>
           <Flex>
             <MainWidth />
+            <MainSwapDims />
             <MainHeight />
             <MainSampler />
           </Flex>

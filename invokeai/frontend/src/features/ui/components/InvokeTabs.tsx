@@ -1,15 +1,9 @@
 import { Tab, TabPanel, TabPanels, Tabs, Tooltip } from '@chakra-ui/react';
 import { RootState } from 'app/store';
 import { useAppDispatch, useAppSelector } from 'app/storeHooks';
-import NodesWIP from 'common/components/WorkInProgress/NodesWIP';
-import { PostProcessingWIP } from 'common/components/WorkInProgress/PostProcessingWIP';
-import TrainingWIP from 'common/components/WorkInProgress/Training';
 import useUpdateTranslations from 'common/hooks/useUpdateTranslations';
 import ImageToImageIcon from 'common/icons/ImageToImageIcon';
-import NodesIcon from 'common/icons/NodesIcon';
-import PostprocessingIcon from 'common/icons/PostprocessingIcon';
 import TextToImageIcon from 'common/icons/TextToImageIcon';
-import TrainingIcon from 'common/icons/TrainingIcon';
 import UnifiedCanvasIcon from 'common/icons/UnifiedCanvasIcon';
 import { setDoesCanvasNeedScaling } from 'features/canvas/store/canvasSlice';
 import { setShouldShowGallery } from 'features/gallery/store/gallerySlice';
