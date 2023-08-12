@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import ParametersAccordion from '../ParametersAccordion';
 import MainCFGScale from './MainCFGScale';
 import MainHeight from './MainHeight';
-import MainIterations from './MainIterations';
 import MainSampler from './MainSampler';
 import MainSteps from './MainSteps';
 import MainWidth from './MainWidth';
@@ -42,12 +41,14 @@ export default function MainSettings() {
             <MainCFGScale />
             <MainSampler />
           </Flex>
-          <Flex marginTop={'0.5rem'}>
+          <hr />
+          <Flex>
             <MainWidth />
             <MainSwapDims />
             <MainHeight />
           </Flex>
-          <Flex marginTop={'0.5rem'}>
+          <hr />
+          <Flex>
             <SeedSettings />
           </Flex>
         </Flex>
