@@ -7,7 +7,6 @@ import SeamCorrectionSettings from 'features/parameters/components/AdvancedParam
 import ImageToImageStrength from 'features/parameters/components/AdvancedParameters/ImageToImage/ImageToImageStrength';
 import SymmetrySettings from 'features/parameters/components/AdvancedParameters/Output/SymmetrySettings';
 import SymmetryToggle from 'features/parameters/components/AdvancedParameters/Output/SymmetryToggle';
-import SeedSettings from 'features/parameters/components/AdvancedParameters/Seed/SeedSettings';
 import GenerateVariationsToggle from 'features/parameters/components/AdvancedParameters/Variations/GenerateVariations';
 import VariationsSettings from 'features/parameters/components/AdvancedParameters/Variations/VariationsSettings';
 import MainSettings from 'features/parameters/components/MainParameters/MainParameters';
@@ -18,16 +17,17 @@ import PromptInput from 'features/parameters/components/PromptInput/PromptInput'
 import InvokeOptionsPanel from 'features/ui/components/InvokeParametersPanel';
 import { useTranslation } from 'react-i18next';
 import PromptExtras from 'features/parameters/components/PromptInput/Extras/PromptExtras';
+// import SeedSettings from 'features/parameters/components/MainParameters/Seed/SeedSettings';
 
 export default function UnifiedCanvasPanel() {
   const { t } = useTranslation();
 
   const unifiedCanvasAccordions = {
-    seed: {
-      header: `${t('parameters.seed')}`,
-      feature: Feature.SEED,
-      content: <SeedSettings />,
-    },
+    // seed: {
+    //   header: `${t('parameters.seed')}`,
+    //   feature: Feature.SEED,
+    //   content: <SeedSettings />,
+    // },
     boundingBox: {
       header: `${t('parameters.boundingBoxHeader')}`,
       feature: Feature.BOUNDING_BOX,
