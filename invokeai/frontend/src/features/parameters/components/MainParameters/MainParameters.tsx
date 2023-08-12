@@ -10,6 +10,7 @@ import MainSampler from './MainSampler';
 import MainSteps from './MainSteps';
 import MainWidth from './MainWidth';
 import MainSwapDims from './MainSwapDims';
+import SeedSettings from './Seed/SeedSettings';
 
 export const inputWidth = 'auto';
 
@@ -45,6 +46,9 @@ export default function MainSettings() {
             <MainSwapDims />
             <MainHeight />
             <MainSampler />
+          </Flex>
+          <Flex>
+            <SeedSettings />
           </Flex>
         </Flex>
       ),

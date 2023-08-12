@@ -24,11 +24,11 @@ export default function ImageToImagePanel() {
   const { t } = useTranslation();
 
   const imageToImageAccordions = {
-    seed: {
-      header: `${t('parameters.seed')}`,
-      feature: Feature.SEED,
-      content: <SeedSettings />,
-    },
+    // seed: {
+    //   header: `${t('parameters.seed')}`,
+    //   feature: Feature.SEED,
+    //   content: <SeedSettings />,
+    // },
     variations: {
       header: `${t('parameters.variations')}`,
       feature: Feature.VARIATIONS,
