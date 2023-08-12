@@ -1,9 +1,9 @@
 import { Flex } from '@chakra-ui/react';
-import Perlin from './Perlin';
-import RandomizeSeed from './RandomizeSeed';
+// import Perlin from './Perlin';
+// import Threshold from './Threshold';
+import RandomizeSeedBtn from './RandomizeSeedBtn';
 import Seed from './Seed';
 import ShuffleSeed from './ShuffleSeed';
-import Threshold from './Threshold';
 
 /**
  * Seed & variation options. Includes iteration, seed, seed randomization, variation options.
@@ -11,10 +11,10 @@ import Threshold from './Threshold';
 const SeedSettings = () => {
   return (
     <Flex gap={2} direction="column">
-      <RandomizeSeed />
       <Flex gap={2}>
         <Seed />
         <ShuffleSeed />
+        <RandomizeSeedBtn />
       </Flex>
       {/* <Flex gap={2}>
         <Threshold />
