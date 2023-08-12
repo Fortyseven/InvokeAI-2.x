@@ -39,12 +39,12 @@ export default function MainHeight() {
   ) : (
     <IAISelect
       isDisabled={activeTabName === 'unifiedCanvas'}
-      label={t('parameters.height')}
+      // label="H"
       value={height}
       flexGrow={1}
       onChange={(e) => dispatch(setHeight(Number(e.target.value)))}
       validValues={HEIGHTS}
-      styleClass="main-settings-block"
+      // styleClass="main-settings-block"
       minWidth="5.3rem"
       size={'xs'}
     />

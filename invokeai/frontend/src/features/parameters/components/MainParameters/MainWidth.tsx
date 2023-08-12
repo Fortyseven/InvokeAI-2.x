@@ -37,16 +37,18 @@ export default function MainWidth() {
       sliderNumberInputProps={{ max: 15360 }}
     />
   ) : (
-    <IAISelect
-      isDisabled={activeTabName === 'unifiedCanvas'}
-      label={t('parameters.width')}
-      value={width}
-      flexGrow={1}
-      onChange={(e) => dispatch(setWidth(Number(e.target.value)))}
-      validValues={WIDTHS}
-      styleClass="main-settings-block"
-      minWidth="5.3rem"
-      size={'xs'}
-    />
+    <>
+      <IAISelect
+        // label="W"
+        isDisabled={activeTabName === 'unifiedCanvas'}
+        value={width}
+        flexGrow={1}
+        onChange={(e) => dispatch(setWidth(Number(e.target.value)))}
+        validValues={WIDTHS}
+        // styleClass="main-settings-block"
+        minWidth="5.3rem"
+        size={'xs'}
+      />
+    </>
   );
 }
