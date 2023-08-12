@@ -4,7 +4,6 @@ import { RootState } from 'app/store';
 import { useAppDispatch, useAppSelector } from 'app/storeHooks';
 import IAIButton from 'common/components/IAIIconButton';
 import { setHeight, setWidth } from 'features/parameters/store/generationSlice';
-import { FaExchangeAlt } from 'react-icons/fa';
 import { HEIGHTS } from 'app/constants';
 import { activeTabNameSelector } from 'features/ui/store/uiSelectors';
 
@@ -57,6 +56,19 @@ export default function MainAspectBar() {
           <>{`${aspect.ratio_w}:${aspect.ratio_h}`}</>
         </IAIButton>
       ))}
+      <IAIButton
+        size={'xs'}
+        flex={1}
+        isDisabled={activeTabName === 'unifiedCanvas'}
+        tooltip="Reset to 768x768"
+        aria-label="Reset to 768x768"
+        onClick={() => {
+          dispatch(setWidth(768));
+          dispatch(setHeight(768));
+        }}
+      >
+        <>Reset</>
+      </IAIButton>
     </Flex>
   );
 }
