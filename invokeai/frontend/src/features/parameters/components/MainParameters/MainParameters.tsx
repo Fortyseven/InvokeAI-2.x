@@ -11,10 +11,13 @@ import MainWidth from './MainWidth';
 import MainSwapDims from './MainSwapDims';
 import SeedSettings from './Seed/SeedSettings';
 import MainAspectBar from './AspectBar/MainAspectBar';
+import ImageToImageStrength from '../AdvancedParameters/ImageToImage/ImageToImageStrength';
+import { activeTabNameSelector } from 'features/ui/store/uiSelectors';
 
 export const inputWidth = 'auto';
 
 export default function MainSettings() {
+  const activeTabName = useAppSelector(activeTabNameSelector);
   const { t } = useTranslation();
 
   const shouldUseSliders = useAppSelector(
@@ -53,6 +56,15 @@ export default function MainSettings() {
           <Flex>
             <SeedSettings />
           </Flex>
+          {activeTabName !== 'txt2img' && (
+            <>
+              <hr />
+              <ImageToImageStrength
+                label={t('parameters.img2imgStrength')}
+                styleClass="main-settings-block image-to-image-strength-main-option"
+              />
+            </>
+          )}
         </Flex>
       ),
     },

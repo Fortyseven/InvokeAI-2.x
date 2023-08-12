@@ -52,18 +52,18 @@ export default function UnifiedCanvasPanel() {
     // },
   };
 
-  const unifiedCanvasImg2ImgAccordion = {
-    unifiedCanvasImg2Img: {
-      header: `${t('parameters.imageToImage')}`,
-      feature: undefined,
-      content: (
-        <ImageToImageStrength
-          label={t('parameters.img2imgStrength')}
-          styleClass="main-settings-block image-to-image-strength-main-option"
-        />
-      ),
-    },
-  };
+  // const unifiedCanvasImg2ImgAccordion = {
+  //   unifiedCanvasImg2Img: {
+  //     header: `${t('parameters.imageToImage')}`,
+  //     feature: undefined,
+  //     content: (
+  //       <ImageToImageStrength
+  //         label={t('parameters.img2imgStrength')}
+  //         styleClass="main-settings-block image-to-image-strength-main-option"
+  //       />
+  //     ),
+  //   },
+  // };
 
   return (
     <InvokeOptionsPanel>
@@ -74,7 +74,7 @@ export default function UnifiedCanvasPanel() {
       </Flex>
       <ProcessButtons />
       <MainSettings />
-      <ParametersAccordion accordionInfo={unifiedCanvasImg2ImgAccordion} />
+      {/* <ParametersAccordion accordionInfo={unifiedCanvasImg2ImgAccordion} /> */}
       <ParametersAccordion accordionInfo={unifiedCanvasAccordions} />
     </InvokeOptionsPanel>
   );
