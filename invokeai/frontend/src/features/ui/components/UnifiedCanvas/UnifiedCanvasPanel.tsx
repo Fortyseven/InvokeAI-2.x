@@ -1,12 +1,8 @@
 // import { Feature } from 'app/features';
 import { Flex } from '@chakra-ui/react';
 import { Feature } from 'app/features';
-import BoundingBoxSettings from 'features/parameters/components/AdvancedParameters/Canvas/BoundingBox/BoundingBoxSettings';
 import InfillAndScalingSettings from 'features/parameters/components/AdvancedParameters/Canvas/InfillAndScalingSettings';
-import SeamCorrectionSettings from 'features/parameters/components/AdvancedParameters/Canvas/SeamCorrection/SeamCorrectionSettings';
 import ImageToImageStrength from 'features/parameters/components/AdvancedParameters/ImageToImage/ImageToImageStrength';
-import SymmetrySettings from 'features/parameters/components/AdvancedParameters/Output/SymmetrySettings';
-import SymmetryToggle from 'features/parameters/components/AdvancedParameters/Output/SymmetryToggle';
 import GenerateVariationsToggle from 'features/parameters/components/AdvancedParameters/Variations/GenerateVariations';
 import VariationsSettings from 'features/parameters/components/AdvancedParameters/Variations/VariationsSettings';
 import MainSettings from 'features/parameters/components/MainParameters/MainParameters';
@@ -28,16 +24,16 @@ export default function UnifiedCanvasPanel() {
     //   feature: Feature.SEED,
     //   content: <SeedSettings />,
     // },
-    boundingBox: {
-      header: `${t('parameters.boundingBoxHeader')}`,
-      feature: Feature.BOUNDING_BOX,
-      content: <BoundingBoxSettings />,
-    },
-    seamCorrection: {
-      header: `${t('parameters.seamCorrectionHeader')}`,
-      feature: Feature.SEAM_CORRECTION,
-      content: <SeamCorrectionSettings />,
-    },
+    // boundingBox: {
+    //   header: `${t('parameters.boundingBoxHeader')}`,
+    //   feature: Feature.BOUNDING_BOX,
+    //   content: <BoundingBoxSettings />,
+    // },
+    // seamCorrection: {
+    //   header: `${t('parameters.seamCorrectionHeader')}`,
+    //   feature: Feature.SEAM_CORRECTION,
+    //   content: <SeamCorrectionSettings />,
+    // },
     infillAndScaling: {
       header: `${t('parameters.infillScalingHeader')}`,
       feature: Feature.INFILL_AND_SCALING,
@@ -49,11 +45,11 @@ export default function UnifiedCanvasPanel() {
       content: <VariationsSettings />,
       additionalHeaderComponents: <GenerateVariationsToggle />,
     },
-    symmetry: {
-      header: `${t('parameters.symmetry')}`,
-      content: <SymmetrySettings />,
-      additionalHeaderComponents: <SymmetryToggle />,
-    },
+    // symmetry: {
+    //   header: `${t('parameters.symmetry')}`,
+    //   content: <SymmetrySettings />,
+    //   additionalHeaderComponents: <SymmetryToggle />,
+    // },
   };
 
   const unifiedCanvasImg2ImgAccordion = {
