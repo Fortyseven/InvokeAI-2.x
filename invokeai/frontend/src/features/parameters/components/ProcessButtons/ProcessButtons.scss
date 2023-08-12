@@ -17,12 +17,10 @@
 .swap-axis-btn {
   height: 1.6rem;
   align-self: self-end;
-  color: gold;
   min-width: 1.5em !important;
   margin: 0.25rem;
 
-  @include Button($btn-color: var(--accent-color),
-    $btn-color-hover: var(--accent-color-hover),
+  @include Button($btn-color-hover: var(--accent-color-hover),
     $icon-size: 16px);
 }
 
