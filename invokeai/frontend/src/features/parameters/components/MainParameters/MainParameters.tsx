@@ -10,6 +10,7 @@ import MainSteps from './MainSteps';
 import MainWidth from './MainWidth';
 import MainSwapDims from './MainSwapDims';
 import SeedSettings from './Seed/SeedSettings';
+import MainAspectBar from './AspectBar/MainAspectBar';
 
 export const inputWidth = 'auto';
 
@@ -37,6 +38,7 @@ export default function MainSettings() {
         <Flex flexDirection="column" rowGap={1}>
           <Flex>
             {/* <MainIterations /> */}
+            <MainSampler />
             <MainSteps />
             <MainCFGScale />
           </Flex>
