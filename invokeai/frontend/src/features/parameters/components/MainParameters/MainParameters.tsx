@@ -39,9 +39,9 @@ export default function MainSettings() {
             {/* <MainIterations /> */}
             <MainSteps />
             <MainCFGScale />
-            <MainSampler />
           </Flex>
           <hr />
+          <MainAspectBar />
           <Flex>
             <MainWidth />
             <MainSwapDims />
