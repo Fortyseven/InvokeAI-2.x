@@ -29,6 +29,7 @@ export interface InvokeTabInfo {
   tooltip: string;
 }
 
+// @ts-expect-error TS2739
 export const tabDict: Record<InvokeTabName, InvokeTabInfo> = {
   txt2img: {
     title: <TextToImageIcon fill="black" boxSize="2.5rem" />,

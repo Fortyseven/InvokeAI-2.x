@@ -1,11 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import { Feature } from 'app/features';
-import FaceRestoreSettings from 'features/parameters/components/AdvancedParameters/FaceRestore/FaceRestoreSettings';
-import FaceRestoreToggle from 'features/parameters/components/AdvancedParameters/FaceRestore/FaceRestoreToggle';
 import OutputSettings from 'features/parameters/components/AdvancedParameters/Output/OutputSettings';
 import SymmetrySettings from 'features/parameters/components/AdvancedParameters/Output/SymmetrySettings';
 import SymmetryToggle from 'features/parameters/components/AdvancedParameters/Output/SymmetryToggle';
-import SeedSettings from 'features/parameters/components/AdvancedParameters/Seed/SeedSettings';
 import UpscaleSettings from 'features/parameters/components/AdvancedParameters/Upscale/UpscaleSettings';
 import UpscaleToggle from 'features/parameters/components/AdvancedParameters/Upscale/UpscaleToggle';
 import GenerateVariationsToggle from 'features/parameters/components/AdvancedParameters/Variations/GenerateVariations';
