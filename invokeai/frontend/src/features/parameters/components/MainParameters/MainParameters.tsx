@@ -36,18 +36,18 @@ export default function MainSettings() {
         </Flex>
       ) : (
         <Flex flexDirection="column" rowGap={1}>
-          <Flex gap={0}>
+          <Flex>
             <MainIterations />
             <MainSteps />
             <MainCFGScale />
           </Flex>
-          <Flex>
+          <Flex marginTop={'0.5rem'}>
             <MainWidth />
             <MainSwapDims />
             <MainHeight />
             <MainSampler />
           </Flex>
-          <Flex marginTop={'1rem'}>
+          <Flex marginTop={'0.5rem'}>
             <SeedSettings />
           </Flex>
         </Flex>
