@@ -35,12 +35,12 @@ export default function ImageToImagePanel() {
       content: <VariationsSettings />,
       additionalHeaderComponents: <GenerateVariationsToggle />,
     },
-    face_restore: {
-      header: `${t('parameters.faceRestoration')}`,
-      feature: Feature.FACE_CORRECTION,
-      content: <FaceRestoreSettings />,
-      additionalHeaderComponents: <FaceRestoreToggle />,
-    },
+    // face_restore: {
+    //   header: `${t('parameters.faceRestoration')}`,
+    //   feature: Feature.FACE_CORRECTION,
+    //   content: <FaceRestoreSettings />,
+    //   additionalHeaderComponents: <FaceRestoreToggle />,
+    // },
     upscale: {
       header: `${t('parameters.upscaling')}`,
       feature: Feature.UPSCALE,
