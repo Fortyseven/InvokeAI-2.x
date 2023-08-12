@@ -26,7 +26,7 @@ import { socketioMiddleware } from './socketio/middleware';
  *
  * These can be blacklisted in redux-persist.
  *
- * The necesssary nested persistors with blacklists are configured below.
+ * The necessary nested persisters with blacklists are configured below.
  */
 
 const canvasBlacklist = [
