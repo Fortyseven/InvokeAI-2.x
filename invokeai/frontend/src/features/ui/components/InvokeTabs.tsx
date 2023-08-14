@@ -27,6 +27,7 @@ export interface InvokeTabInfo {
   title: ReactElement;
   workarea: ReactElement;
   tooltip: string;
+  id: string;
 }
 
 // @ts-expect-error TS2739
@@ -35,16 +36,19 @@ export const tabDict: Record<InvokeTabName, InvokeTabInfo> = {
     title: <TextToImageIcon fill="black" boxSize="2.5rem" />,
     workarea: <TextToImageWorkarea />,
     tooltip: 'Text To Image',
+    id: 'txt2img',
   },
   img2img: {
     title: <ImageToImageIcon fill="black" boxSize="2.5rem" />,
     workarea: <ImageToImageWorkarea />,
     tooltip: 'Image To Image',
+    id: 'img2img',
   },
   unifiedCanvas: {
     title: <UnifiedCanvasIcon fill="black" boxSize="2.5rem" />,
     workarea: <UnifiedCanvasWorkarea />,
     tooltip: 'Unified Canvas',
+    id: 'unifiedCanvas',
   },
 };
 
